@@ -18,12 +18,52 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\sarah.matta\RiderProjects\AsteriaArchives\AsteriaArchives
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/DevJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxEZXZKb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/GeekJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxHZWVrSm9rZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/MiscJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxNaXNjSm9rZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/NSFWProgrammingJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxOU0ZXUHJvZ3JhbW1pbmdKb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/ProgrammingJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxQcm9ncmFtbWluZ0pva2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/PunJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxQdW5Kb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/BackEnd/SpookyJoke.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja0VuZFxTcG9va3lKb2tlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/FrontEnd/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJvbnRFbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/Hackathon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFja2F0aG9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/Home/Sources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTb3VyY2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sarah.matta/RiderProjects/AsteriaArchives/AsteriaArchives/Views/Shared/Error.cshtml]

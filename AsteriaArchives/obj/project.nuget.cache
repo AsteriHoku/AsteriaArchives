@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NdqtwVSDSWx4IEV89+42IkUlBYIwNtNjq1OZFz69zbfQUdJ8jQQLShdrQ6WLjVMC7DqOXoYy8rFe9J7Y8FhVSA==",
+  "dgSpecHash": "vHIICz+/DcFwkkmFd3YtJDbJwxTtqE+5BrS7PQ3fK0Yd5UjyOlOZ0yyg7z6qOCxEfEMGU7Hp2165vLhtKMDnsQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\sarah.matta\\RiderProjects\\AsteriaArchives\\AsteriaArchives\\AsteriaArchives.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sarah.matta\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0-preview.2.24128.5\\microsoft.win32.systemevents.9.0.0-preview.2.24128.5.nupkg.sha512",
+    "C:\\Users\\sarah.matta\\.nuget\\packages\\system.drawing.common\\9.0.0-preview.2.24128.3\\system.drawing.common.9.0.0-preview.2.24128.3.nupkg.sha512"
+  ],
   "logs": []
 }

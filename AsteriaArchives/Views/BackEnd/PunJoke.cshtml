@@ -1,0 +1,58 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model DevJokes.Models.NSFWjoke
+@{
+    ViewData["Title"] = "Pun Joke";
+}
+
+<script>
+window.onload = function () {
+    const copyButton = document.getElementById("copyButton");
+
+    if (copyButton) {
+        copyButton.addEventListener("click", () => {
+            copyToClipboard();
+        });
+    }
+};
+</script>
+
+<style>
+</style>
+
+<h1>
+    <i class="fa-solid fa-person-falling-burst mx-2"></i>@ViewData["Title"]
+</h1>
+<hr class="my-4">
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col-xs-10 col-md-6 text-center">
+        <h2 class="geek-font">Here's a potentially NSFW pun joke:</h2>
+        <hr class="my-4">
+        <div id="joke">
+            @if (Model.type == "twopart")
+            {
+                <p>@Model.setup</p>
+                <p>@Model.delivery</p>
+            }
+            else
+            {
+                <p>@Model.joke</p>
+            }
+        </div>
+    </div>
+</div>
+<div class="text-center my-3">
+    <div class="row d-flex">
+        <div class="col-6 d-flex justify-content-end px-1">
+            <button class="btn btn-outline-info" id="copyButton">
+                <i class="fa-regular fa-copy mx-3" id="copyIcon"></i>
+            </button>
+        </div>
+        <div class="col-6 d-flex align-items-start px-1">
+            <button class="btn btn-info button-font" id="refreshButton">
+                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="PunJoke">
+                    <i class="fa-solid fa-repeat"></i>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>

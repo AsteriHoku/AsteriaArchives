@@ -6,6 +6,11 @@ namespace AsteriaArchives.Controllers;
 
 public class HomeController : Controller
 {
+    //todo
+    //update client so it's factory and using scope or something
+    //debug current state
+    //play with custom range slider for frontend
+    //create dropdown navbar
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -18,7 +23,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Sources()
     {
         return View();
     }
