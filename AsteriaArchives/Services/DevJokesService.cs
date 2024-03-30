@@ -43,14 +43,14 @@ public class DevJokesService
     {
         var jokeQuestion = await FormatJokeText(joke.question);
         var jokePunchline = await FormatJokeText(joke.punchline);
-        var jokeText = $"{jokeQuestion}{jokePunchline}\n\n\n- devjokes.azurewebsites.net";
+        var jokeText = $"{jokeQuestion}{jokePunchline}\n\n\n- devjokes AsteriaArchives.com";
         return await StreamFromText(jokeText);
     }
 
     public async Task<MemoryStream> GenerateGeekJokeCard(GeekJoke joke)
     {
         var jokePunchline = await FormatJokeText(joke.joke);
-        var jokeText = $"{jokePunchline}\n\n- devjokes.azurewebsites.net";
+        var jokeText = $"{jokePunchline}\n\n- devjokes AsteriaArchives.com";
         return await StreamFromText(jokeText);
     }
     
