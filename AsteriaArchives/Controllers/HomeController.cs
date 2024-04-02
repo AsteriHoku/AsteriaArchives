@@ -7,10 +7,11 @@ namespace AsteriaArchives.Controllers;
 public class HomeController : Controller
 {
     //todo
+    //check gitignore what files are in source control
     //update client so it's factory and using scope or something
     //debug current state
     //play with custom range slider for frontend
-    //create dropdown navbar
+    //create dropdown navbar & combine navlinks
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
