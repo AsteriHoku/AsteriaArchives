@@ -43,14 +43,14 @@ public class DevJokesService
     {
         var jokeQuestion = await FormatJokeText(joke.question);
         var jokePunchline = await FormatJokeText(joke.punchline);
-        var jokeText = $"{jokeQuestion}{jokePunchline}\n\n\n- devjokes AsteriaArchives.com";
+        var jokeText = $"{jokeQuestion}{jokePunchline}\n- devjokes AsteriaArchives.com";
         return await StreamFromText(jokeText);
     }
 
     public async Task<MemoryStream> GenerateGeekJokeCard(GeekJoke joke)
     {
         var jokePunchline = await FormatJokeText(joke.joke);
-        var jokeText = $"{jokePunchline}\n\n- devjokes AsteriaArchives.com";
+        var jokeText = $"{jokePunchline}\n- devjokes AsteriaArchives.com";
         return await StreamFromText(jokeText);
     }
     
@@ -94,7 +94,7 @@ public class DevJokesService
                 sb.AppendLine(line.ToString()); // Start a new line
                 line.Clear().Append(word);
             }
-            if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith("."))
+            if (word.EndsWith("?") || word.EndsWith(")") || word.EndsWith(".") || word.EndsWith(".'") || word.EndsWith("!"))
                 line.AppendLine("\n");
         }
         sb.Append(line.ToString()); // Append any remaining content

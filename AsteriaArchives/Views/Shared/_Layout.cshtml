@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AsteriaArchives.styles.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.css"/>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AsteriaArchives</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -31,30 +31,59 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="FrontEnd" asp-action="Index">FrontEnd</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="DevJoke">Dev</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            BackEnd
+                        </a>
+                        <ul class="dropdown-menu sitecolor-background">
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="RgbBinary">Rgb Binary</a>
+                            </li>
+                            @* <li> *@
+                            @*     <hr class="dropdown-divider"> *@
+                            @* </li> *@
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="GeekJoke">Geek</a>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            DevJokes
+                        </a>
+                        <ul class="dropdown-menu sitecolor-background">
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="DevJoke">Dev</a>
+                            </li>
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="GeekJoke">Geek</a>
+                            </li>
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="ProgrammingJoke">Programming</a>
+                            </li>
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="NSFWProgrammingJoke">NSFWProgramming</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="SpookyJoke">Spooky</a>
+                            </li>
+                            @* <li class="navbar dropdown-item"> *@
+                            @*     <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="PunJoke">Pun</a> *@
+                            @* </li> *@
+                            @* <li class="navbar dropdown-item"> *@
+                            @*     <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="MiscJoke">Misc</a> *@
+                            @* </li> *@
+                            @* <li> *@
+                            @*     <hr class="dropdown-divider"> *@
+                            @* </li> *@
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="ProgrammingJoke">Programming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="NSFWProgrammingJoke">NSFWProgramming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="SpookyJoke">Spooky</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="PunJoke">Pun</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="MiscJoke">Misc</a>
-                    </li>
-                                        @* <li class="nav-item py-1 px-2 border border-info rounded-2"> *@
-                                        @*     <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="DevJoke">Dev</a> *@
-                                        @* </li> *@
+
+
+                    @* <li class="nav-item py-1 px-2 border border-info rounded-2"> *@
+                    @*     <a class="nav-link text-dark" asp-area="" asp-controller="BackEnd" asp-action="DevJoke">Dev</a> *@
+                    @* </li> *@
                 </ul>
             </div>
         </div>
@@ -70,7 +99,7 @@
     <div class="container">
         &copy; @DateTime.Now.Year - AsteriaArchives -
         <i class="fa-brands fa-github mx-1"></i>
-        <a href="https://github.com/AsteriHoku" target="_blank">GitHub</a> - 
+        <a href="https://github.com/AsteriHoku" target="_blank">GitHub</a> -
         <a asp-area="" asp-controller="Home" asp-action="Sources">Sources</a>
     </div>
 </footer>

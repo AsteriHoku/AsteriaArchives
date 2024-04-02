@@ -5,9 +5,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AsteriaArchives.Controllers;
 
-public class BackEndController(DevJokesService devJokesService, IHttpClientFactory clientFactory) : Controller {
+public class BackEndController(DevJokesService devJokesService, RgbBinaryService rgbService, IHttpClientFactory clientFactory) : Controller {
     private readonly DevJokesService _devJokesService = devJokesService;
 
+    public async Task<IActionResult> RgbBinary()
+    {
+        //todo
+        //create view and allow user string input
+        //min char number or number of words
+        //var img = await rgbService.Create();
+        return View();
+    }
+    
     [Route("/Dev")]
     public async Task<IActionResult> DevJoke() {
         DevJoke devJoke;
@@ -77,14 +86,14 @@ public class BackEndController(DevJokesService devJokesService, IHttpClientFacto
         if (res.IsSuccessStatusCode) {
             var content = await res.Content.ReadAsStringAsync();
             programmingJoke = JsonSerializer.Deserialize<List<ProgrammingJoke>>(content)?[0];
-            programmingJoke.binary = await devJokesService.GetSetDevVM(programmingJoke.punchline);
-            return View(programmingJoke);
         }
         else {
             Console.WriteLine("ProgrammingJoke API failed. No backup.");
+            programmingJoke = new ProgrammingJoke();
         }
 
-        return View(new ProgrammingJoke());
+        programmingJoke.binary = await devJokesService.GetSetDevVM(programmingJoke.punchline);
+        return View(programmingJoke);
     }
 
     [Route("/NSFWProgramming")]

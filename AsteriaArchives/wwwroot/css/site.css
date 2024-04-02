@@ -8,20 +8,6 @@
   }
 }
 
-html {
-  font-size: 14px;
-  position: relative;
-  min-height: 100%;
-  background-color: #222;
-  color: #e7e4e4;
-}
-
-body {
-  margin-bottom: 60px;
-  background-color: #222;
-  color: #e7e4e4;
-}
-
 a {
   color: #007bff;
 }
@@ -30,9 +16,37 @@ a:visited {
   color: #b072ea;
 }
 
+body {
+  margin-bottom: 60px;
+  background-color: #222;
+  color: #e7e4e4;
+}
+
 header, footer {
   background-color: #444;
   color: #e7e4e4;
+}
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+  background-color: #222;
+  color: #e7e4e4;
+}
+
+/*classes*/
+.button-font {
+  font-family: 'Courier New', monospace;
+  font-weight: bolder;
+}
+
+.geek-font {
+  font-family: 'Courier New', monospace!important;
+}
+
+.info-text {
+  color: mediumaquamarine;
 }
 
 .navbar {
@@ -59,13 +73,8 @@ header, footer {
   background-color: #007bff!important; /* Example background color for active item */
 }
 
-.button-font {
-  font-family: 'Courier New', monospace;
-  font-weight: bolder;
-}
-
-.geek-font {
-  font-family: 'Courier New', monospace!important;
+.sitecolor-background{
+  background-color: mediumaquamarine;
 }
 
 .tiny-font {
@@ -73,10 +82,7 @@ header, footer {
   overflow: hidden;
 }
 
-.info-text {
-  color: mediumaquamarine;
-}
-
+/*ids*/
 #copyButton {
   border-color: #0dcaf0;
   color: #0dcaf0;
@@ -85,30 +91,3 @@ header, footer {
 #refreshButton{
   color: black!important;
 }
-
-
-
-
-
-
-
-
-
-/*html {*/
-/*  font-size: 14px;*/
-/*}*/
-
-/*@media (min-width: 768px) {*/
-/*  html {*/
-/*    font-size: 16px;*/
-/*  }*/
-/*}*/
-
-/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {*/
-/*  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;*/
-/*}*/
-
-/*html {*/
-/*  position: relative;*/
-/*  min-height: 100%;*/
-/*}*/
