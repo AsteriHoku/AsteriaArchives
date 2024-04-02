@@ -129,6 +129,7 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
         return View(spookyJoke);
     }
 
+    //revisit
     [Route("/Pun")]
     public async Task<IActionResult> PunJoke() {
         using var client = clientFactory.CreateClient();
@@ -139,6 +140,7 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
         return View(punJoke);
     }
 
+    //revisit
     [Route("/Misc")]
     public async Task<IActionResult> MiscJoke() {
         using var client = clientFactory.CreateClient();
