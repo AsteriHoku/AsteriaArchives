@@ -23,7 +23,6 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
         int rand = new Random().Next(0, 2);
         if (rand == 1) {
             using var client = clientFactory.CreateClient();
-            //var uri = new Uri("https://backend-omega-seven.vercel.app/api/getjoke");
             var res = await client.GetAsync(new Uri("https://backend-omega-seven.vercel.app/api/getjoke"));
             if (res.IsSuccessStatusCode) {
                 var content = await res.Content.ReadFromJsonAsync<List<DevJoke>>();
@@ -38,7 +37,6 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
             devJoke = await devJokesService.NonAPIDevJoke();
         }
 
-        //ViewData["Message"] = "Hello from ViewData!";
         ViewBag.binary = await devJokesService.GetSetDevVM(devJoke.punchline);
         ViewBag.question = devJoke.question;
         ViewBag.punchline = devJoke.punchline;
@@ -57,10 +55,10 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
         if (rand == 1) {
             using var client = clientFactory.CreateClient();
             var uri = new Uri("https://geek-jokes.sameerkumar.website/api?format=json");
-            var httpResponse = await client.GetAsync(uri);
-            if (httpResponse.IsSuccessStatusCode) {
-                var content = await httpResponse.Content.ReadAsStringAsync();
-                geekJoke = JsonSerializer.Deserialize<GeekJoke>(content);
+            var res = await client.GetAsync(uri);
+            if (res.IsSuccessStatusCode)
+            {
+                geekJoke = await res.Content.ReadFromJsonAsync<GeekJoke>();
             }
             else {
                 Console.WriteLine("GeekJoke API failed. Using backup.");
@@ -81,11 +79,11 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
     public async Task<IActionResult> ProgrammingJoke() {
         ProgrammingJoke programmingJoke;
         using var client = clientFactory.CreateClient();
-        //var uri = new Uri("https://official-joke-api.appspot.com/jokes/programming/random#");
         var res = await client.GetAsync(new Uri("https://official-joke-api.appspot.com/jokes/programming/random#"));
-        if (res.IsSuccessStatusCode) {
-            var content = await res.Content.ReadAsStringAsync();
-            programmingJoke = JsonSerializer.Deserialize<List<ProgrammingJoke>>(content)?[0];
+        if (res.IsSuccessStatusCode)
+        {
+            var content = await res.Content.ReadFromJsonAsync<List<ProgrammingJoke>>();
+            programmingJoke = content?[0];
         }
         else {
             Console.WriteLine("ProgrammingJoke API failed. No backup.");

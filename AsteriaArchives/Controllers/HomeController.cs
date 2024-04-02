@@ -8,7 +8,6 @@ public class HomeController : Controller
 {
     //todo
     //check gitignore what files are in source control
-    //update client so it's factory and using scope or something
     //design custom color palette and apply to site, add classes like sitecolor-background  
     //debug current state (fix all dev jokes)
     //revisit pun & misc jokes (they seem to have gotten a little too NSFW)

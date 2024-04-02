@@ -4,7 +4,7 @@
     font-size: 16px;
   }
   a:visited {
-    color: #b072ea;
+    color: mediumaquamarine;
   }
 }
 
@@ -13,7 +13,7 @@ a {
 }
 
 a:visited {
-  color: #b072ea;
+  color: mediumaquamarine;
 }
 
 body {
@@ -60,7 +60,7 @@ html {
 
 .navbar a:hover,
 .navbar a:focus {
-  color: #007bff!important;
+  color: #31adcb !important;
 }
 
 /* Optional: Add box shadow to the navbar */
@@ -70,7 +70,7 @@ html {
 
 /* Optional: Style active navbar items differently (e.g., with a background color) */
 .navbar .active {
-  background-color: #007bff!important; /* Example background color for active item */
+  background-color: #31adcb!important; /* Example background color for active item */
 }
 
 .sitecolor-background{
@@ -84,8 +84,8 @@ html {
 
 /*ids*/
 #copyButton {
-  border-color: #0dcaf0;
-  color: #0dcaf0;
+  border-color: #31adcb;
+  color: #31adcb;
 }
 
 #refreshButton{

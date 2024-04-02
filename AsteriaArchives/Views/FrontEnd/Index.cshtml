@@ -3,5 +3,48 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Coming Soon!</h1>
+    <h1 class="display-4">Wizardry!</h1>
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center">
+                <h2 class="">How many licks does it take to get to the center of a Tootsie Pop?</h2>
+            </div><!-- end text center -->
+            <div class="text-center font-monospace fs-4 fw-bold">
+                <output for="licks-range" id="range-output">0</output>
+            </div>
+            <div>
+                <input class="form-control-range w-100 fourth" type="range" id="licks-range" name="usage" min="0" max="500000" value="0" step="10" list="ticks"/>
+                <datalist class="w-100" id="ticks">
+                    <option class="font-monospace" value="0" label="0"></option>
+                    <option class="font-monospace" value="100000" label="100,000"></option>
+                    <option class="font-monospace" value="200000" label="200,000"></option>
+                    <option class="font-monospace" value="300000" label="300,000"></option>
+                    <option class="font-monospace" value="400000" label="400,000"></option>
+                    <option class="font-monospace" value="500000" label="500,000+"></option>
+                </datalist>
+            </div>
+        </div> <!-- end col -->
+    </div> <!-- end row -->
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let inputRange = document.getElementById('licks-range');
+      let outputRange = document.getElementById('range-output');
+
+      outputRange.setAttribute('for', 'licks-range');
+
+      inputRange.addEventListener('input', function() {
+        outputRange.textContent = inputRange.value;
+      });
+    });
+</script>
+
+<style>
+    datalist {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      writing-mode: vertical-lr;
+    }
+</style>
