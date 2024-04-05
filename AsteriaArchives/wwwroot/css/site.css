@@ -77,6 +77,11 @@ html {
   background-color: mediumaquamarine;
 }
 
+.sitecolor-btn{
+  background-color: mediumaquamarine;
+  color: black;
+}
+
 .tiny-font {
   font-size: 0.6rem;
   overflow: hidden;

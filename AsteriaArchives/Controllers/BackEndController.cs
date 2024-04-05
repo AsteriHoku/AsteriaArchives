@@ -5,16 +5,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AsteriaArchives.Controllers;
 
-public class BackEndController(DevJokesService devJokesService, RgbBinaryService rgbService, IHttpClientFactory clientFactory) : Controller {
-    private readonly DevJokesService _devJokesService = devJokesService;
-
+public class BackEndController(DevJokesService devJokesService,
+    RgbBinaryService rgbService,
+    IHttpClientFactory clientFactory) : Controller {
+    
+    [Route("/RgbBinary")]
     public async Task<IActionResult> RgbBinary()
     {
-        //todo
-        //create view and allow user string input
-        //min char number or number of words
-        //var img = await rgbService.Create();
         return View();
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> GetRgbBinary([FromBody] InputModel input)
+    {
+        var imgBytes = await rgbService.Create(input.textInput);
+        return File(imgBytes, "image/png");
     }
     
     [Route("/Dev")]
@@ -149,5 +154,10 @@ public class BackEndController(DevJokesService devJokesService, RgbBinaryService
         var content = await httpResponse.Content.ReadAsStringAsync();
         var miscJoke = JsonSerializer.Deserialize<NSFWjoke>(content);
         return View(miscJoke);
+    }
+    
+    public class InputModel
+    {
+        public string textInput { get; set; }
     }
 }

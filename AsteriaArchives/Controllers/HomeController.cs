@@ -11,7 +11,8 @@ public class HomeController : Controller
     //debug current state (fix all dev jokes)
     //set up logger and add logs
     //search solution for todos
-    //update bootstrap and fontawesome and debug after, be sure to check docs for breaking changes
+    //update bootstrap and fontawesome and debug after, be sure to check docs for breaking changes, remove jquery after?
+    //download output & word doc output
 
     private readonly ILogger<HomeController> _logger;
 

@@ -5,4 +5,78 @@
 <div class="text-center">
     <h1 class="display-4">Create your own rainbow binary secret message image!</h1>
     <h3>Image will be 1920x1080 appropriate for desktop wallpapers or video conference backgrounds</h3>
+    <h3>Check the console for a printout of your special message in rainbow binary</h3>
+    <div class="container mt-5">
+        <h1>Image Downloader</h1>
+        <form id="rgb" onsubmit="return downloadImage(document.getElementById('textInput').value)">
+            <div class="form-group">
+                <label for="textInput">Enter a special message:</label>
+                <textarea type="text" class="form-control" id="textInput" placeholder="Enter text input of at least 700 characters to fill the entire image" minlength="700" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn sitecolor-btn mt-1">Download Rainbow Binary Image</button>
+        </form>
+    </div>
+
 </div>
+
+<script>
+    function binarifyString(str){
+        return str.split('').map(char => {
+            return char.charCodeAt(0).toString(2);
+            }).join(' ');
+    }
+    
+    function printRainbowBinaryString(str){
+        let binary = binarifyString(str);
+        const RFG_COLORS = ['31','33','32','36','34','35'];
+    
+        let [fgs, ic] = ['', 0];
+        
+        for (let i = 0; i < binary.length; ++i){
+            if (binary[i] === ' '){
+                fgs += ' ';
+            } else {
+                fgs += `\u001b[${RFG_COLORS[ic]}m${binary[i]}`;
+                ic++;
+            }
+        
+            if (ic === RFG_COLORS.length) ic = 0;
+        }
+        
+        console.log(`Your Rainbow Binary Output: \n\u001b[0m${fgs}\u001b[0m`);
+    }
+    
+    function downloadImage(input) {
+        event.preventDefault();
+        //todo check word doc code
+        
+        printRainbowBinaryString(input);
+        
+        fetch('/BackEnd/GetRgbBinary', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ textInput: input })
+        })
+            .then(response => {
+                if (!response.ok) {
+                    console.log(response.status);
+                    throw new Error('Network response problem');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                let a = document.createElement('a');
+                let url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = 'RainbowBinary.png';
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Error downloading image:', error);
+            });
+    }
+</script>
