@@ -11,7 +11,7 @@
         <form id="rgb" onsubmit="return downloadImage(document.getElementById('textInput').value)">
             <div class="form-group">
                 <label for="textInput">Enter a special message:</label>
-                <textarea type="text" class="form-control" id="textInput" placeholder="Enter text input of at least 700 characters to fill the entire image" minlength="700" rows="10" required></textarea>
+                <textarea type="text" class="form-control" id="textInput" placeholder="Enter text of at least 800 characters to ensure the 1s and 0s fill the entire image" minlength="800" rows="10" required></textarea>
             </div>
             <button type="submit" class="btn sitecolor-btn mt-1">Download Rainbow Binary Image</button>
         </form>
@@ -29,7 +29,6 @@
     function printRainbowBinaryString(str){
         let binary = binarifyString(str);
         const RFG_COLORS = ['31','33','32','36','34','35'];
-    
         let [fgs, ic] = ['', 0];
         
         for (let i = 0; i < binary.length; ++i){
