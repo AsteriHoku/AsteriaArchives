@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Code &&|| Algorithms Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Coming Soon!</h1>
+</div>
+
+@* @section Breadcrumbs { *@
+@*     <div class="col-6"> *@
+@*         <nav aria-label="breadcrumb"> *@
+@*             <ol class="breadcrumb breadcrumb-style1 mg-b-10"> *@
+@*                 <li class="breadcrumb-item"> *@
+@*                     <a href="/"> *@
+@*                         Dashboard *@
+@*                     </a> *@
+@*                 </li> *@
+@*                 <li class="breadcrumb-item active" *@
+@*                     aria-current="page"> *@
+@*                     Associations *@
+@*                 </li> *@
+@*             </ol> *@
+@*         </nav> *@
+@*         <h4 class="mg-b-0 tx-spacing--1"> *@
+@*             Associations *@
+@*         </h4> *@
+@*     </div> *@
+@* } *@
+
+<div class="row">
+    <div class="col-12 text-left">
+        <div class="h5 mx-2">Profiles for Account:<div>@ViewBag.AccountName</div></div>
+        <div class="h6 mx-2">AccountId: <div class="text-monospace">@Model[0].AccountId</div></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="customGridWrapper"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        new gridjs.Grid({
+            data: [
+                @foreach (var b in Model) {
+                    @:{ name: '@b.ProfileName', account: '@b.AccountId'},
+                }
+            ],
+            columns: [
+                {
+                    id: 'name',
+                    name: 'Profile Name',
+                    sort: true
+                },
+                {
+                    id: 'account',
+                    name: 'Account'
+                }
+            ],
+            language: {
+                'search': {
+                    'placeholder': '🔍 Search...'
+                },
+                'pagination': {
+                    'previous': '⬅️',
+                    'next': '➡️',
+                    'results': 'Profiles'
+                }
+            },
+            search: {
+                enabled: true,
+            },
+            sort: false,
+            pagination: true,
+            autoWidth: true,
+            resizable: true
+        }).render(document.getElementById('customGridWrapper'));
+        
+    </script>
+}
