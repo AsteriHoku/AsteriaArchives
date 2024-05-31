@@ -10,8 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"]Roots & Rainbows</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/rootsrainbows.css"/>
 </head>
-<body>
+<body class="gradient17">
 @* <header> *@
 @*     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> *@
 @*         <div class="container-fluid"> *@
@@ -33,11 +34,27 @@
 @*         </div> *@
 @*     </nav> *@
 @* </header> *@
-<div class="container">
-    <main role="main" class="pb-3">
+<div class="container-fluid" style="min-height: 100vh;">
+    <main role="main" class="pb-3 pt-5">
         <div class="text-center">
             <h1 class="display-4">Roots & Rainbows Salon Studio</h1>
         </div>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-9">
+                <div class="card m-2 m-md-5">
+                    <div class="card-header" style="background: var(--main-color);">
+                        Hello. Nice to meet you.
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Titles Happen</h5>
+                        <p class="card-text">Paragraphs inside cards give us information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* <div class="gradient7 text-center my-6"> *@
+        @*     <h1 class="display-4">Roots & Rainbows Salon Studio</h1> *@
+        @* </div> *@
     </main>
 </div>
 
@@ -49,52 +66,3 @@
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-<style>
-    :root {
-        --main-color: #f3bd99;
-        --main-dark10: #dbaa8a;
-        --main-dark20: #c2977a;
-        --main-dark30: #aa846b;
-        --main-dark40: #92715c;
-        --main-dark50: #7a5f4d;
-        --main-dark60: #614c3d;
-        --main-dark70: #49392e;
-        --main-dark80: #31261f;
-        --main-dark90: #18130f;
-        --main-dark100: #000000;
-        --main-light10: #f4c4a3;
-        --main-light20: #f5caad;
-        --main-light30: #f7d1b8;
-        --main-light40: #f8d7c2;
-        --main-light50: #f9decc;
-        --main-light60: #fae5d6;
-        --main-light70: #fbebe0;
-        --main-light80: #fdf2eb;
-        --main-light90: #fef8f5;
-        --main-light100: #ffffff;
-        
-        --main-complement: #99cff3;
-        
-        --main-split-complement1: #bdf399;
-        --main-split-complement2: #9999f3;
-        
-        --main-triadic1: #99f3bd;
-        --main-triadic2: #bd99f3;
-        
-        --main-analogous1: #f3b499;
-        --main-analogous2: #f3c699;
-        
-        --main-monochromatic1: #49392e;
-        --main-monochromatic2: #9e7b63;
-        
-        --main-tetradic1: #a2f399;
-        --main-tetradic2: #99cff3;
-        --main-tetradic3: #ea99f3;
-        
-        --main2-raw-sienna: #d67747;
-        --main3-mai-tai: #a76f07;
-    }
-    
-</style>

@@ -1,0 +1,213 @@
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  a:visited {
+    color: mediumaquamarine;
+  }
+}
+
+:root {
+  --main-color: #f3bd99;
+  --main2-raw-sienna: #d67747;
+  --main3-mai-tai: #a76f07;
+  
+  --main-dark10: #dbaa8a;
+  --main-dark20: #c2977a;
+  --main-dark30: #aa846b;
+  --main-dark40: #92715c;
+  --main-dark50: #7a5f4d;
+  --main-dark60: #614c3d;
+  --main-dark70: #49392e;
+  --main-dark80: #31261f;
+  --main-dark90: #18130f;
+  --main-dark100: #000000;
+  --main-light10: #f4c4a3;
+  --main-light20: #f5caad;
+  --main-light30: #f7d1b8;
+  --main-light40: #f8d7c2;
+  --main-light50: #f9decc;
+  --main-light60: #fae5d6;
+  --main-light70: #fbebe0;
+  --main-light80: #fdf2eb;
+  --main-light90: #fef8f5;
+  --main-light100: #ffffff;
+
+  --main-complement: #99cff3;
+
+  --main-split-complement1: #bdf399;
+  --main-split-complement2: #9999f3;
+
+  --main-triadic1: #99f3bd;
+  --main-triadic2: #bd99f3;
+
+  --main-analogous1: #f3b499;
+  --main-analogous2: #f3c699;
+
+  --main-monochromatic1: #49392e;
+  --main-monochromatic2: #9e7b63;
+
+  --main-tetradic1: #a2f399;
+  --main-tetradic2: #99cff3;
+  --main-tetradic3: #ea99f3;
+}
+
+.gradient1 {
+  background: linear-gradient(90deg, #a2f399, #99cff3);
+}
+
+.gradient2 {
+  background: linear-gradient(90deg, var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient3 {
+  background: linear-gradient(90deg, var(--main-tetradic3), var(--main-tetradic1));
+}
+
+.gradient4 {
+  background: linear-gradient(90deg, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient5 {
+  background: linear-gradient(45deg, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient6 {
+  background: linear-gradient(to bottom right, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient7 {
+  background: radial-gradient(circle, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+  /*background-size: cover;*/
+  /*height: 100vh;*/
+  /*margin: 0;*/
+}
+
+.gradient8 {
+  background: radial-gradient(circle at top left, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient9 {
+  background: conic-gradient(from 90deg at 50% 50%, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient10 {
+  background: linear-gradient(45deg, var(--main-color), var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.gradient11 {
+  background: linear-gradient(to bottom right, var(--main-tetradic3), var(--main-color), var(--main-tetradic1), var(--main-tetradic2));
+}
+
+.gradient17 {
+  background: radial-gradient(circle at bottom right, var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3), var(--main-color));
+}
+
+.gradient19 {
+  background: linear-gradient(to top left, var(--main-color), var(--main-tetradic1), var(--main-tetradic2), var(--main-tetradic3));
+}
+
+.card {
+  border-radius: 15px;
+  border: 20px solid var(--main-light80);
+}
+
+.card-header {
+  border-top-left-radius: 15px; !important;
+  border-top-right-radius: 15px; !important;
+}
+
+.card-body {
+  border-bottom-left-radius: 15px; !important;
+  border-bottom-right-radius: 15px; !important;
+}
+
+/*a {*/
+/*  color: #007bff;*/
+/*}*/
+
+/*a:visited {*/
+/*  color: mediumaquamarine;*/
+/*}*/
+
+/*body {*/
+/*  margin-bottom: 60px;*/
+/*  background-color: #222;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*header, footer {*/
+/*  background-color: #444;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*html {*/
+/*  font-size: 14px;*/
+/*  position: relative;*/
+/*  min-height: 100%;*/
+/*  background-color: #222;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*!*classes*!*/
+/*.button-font {*/
+/*  font-family: 'Courier New', monospace;*/
+/*  font-weight: bolder;*/
+/*}*/
+
+/*.geek-font {*/
+/*  font-family: 'Courier New', monospace!important;*/
+/*}*/
+
+/*.info-text {*/
+/*  color: mediumaquamarine;*/
+/*}*/
+
+/*.navbar {*/
+/*  background-color: #333!important;*/
+/*  color: #e7e4e4!important;*/
+/*}*/
+
+/*.navbar a {*/
+/*  color: #e7e4e4!important;*/
+/*}*/
+
+/*.navbar a:hover,*/
+/*.navbar a:focus {*/
+/*  color: #31adcb !important;*/
+/*}*/
+
+/*!* Optional: Add box shadow to the navbar *!*/
+/*.navbar {*/
+/*  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important; !* Add a subtle shadow for depth *!*/
+/*}*/
+
+/*!* Optional: Style active navbar items differently (e.g., with a background color) *!*/
+/*.navbar .active {*/
+/*  background-color: #31adcb!important; !* Example background color for active item *!*/
+/*}*/
+
+/*.sitecolor-background{*/
+/*  background-color: mediumaquamarine;*/
+/*}*/
+
+/*.sitecolor-btn{*/
+/*  background-color: mediumaquamarine;*/
+/*  color: black;*/
+/*}*/
+
+/*.tiny-font {*/
+/*  font-size: 0.6rem;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*!*ids*!*/
+/*#copyButton {*/
+/*  border-color: #31adcb;*/
+/*  color: #31adcb;*/
+/*}*/
+
+/*#refreshButton{*/
+/*  color: black!important;*/
+/*}*/
