@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AsteriaArchives.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.css"/>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"/>
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"/>
 </head>
 <body>
 <header>
@@ -34,9 +34,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Hackathon" asp-action="Index">Hackathon</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="FrontEnd" asp-action="Index">FrontEnd</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             BackEnd
@@ -50,7 +47,22 @@
                             @* </li> *@
                         </ul>
                     </li>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FrontEnd
+                        </a>
+                        <ul class="dropdown-menu sitecolor-background">
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="FrontEnd" asp-action="Index">FrontEnd</a>
+                            </li>
+                            <li class="navbar dropdown-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="RootsRainbows" asp-action="Index">RootsRainbows</a>
+                            </li>
+                            @* <li> *@
+                            @*     <hr class="dropdown-divider"> *@
+                            @* </li> *@
+                        </ul>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             DevJokes

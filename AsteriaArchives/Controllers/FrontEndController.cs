@@ -10,4 +10,9 @@ public class FrontEndController : Controller
         return View();
     }
     
+    [Route("/Wizardry/SeaGreen")]
+    public IActionResult GradientSeaGreen()
+    {
+        return View();
+    }
 }

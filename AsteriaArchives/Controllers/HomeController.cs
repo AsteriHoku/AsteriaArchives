@@ -31,6 +31,11 @@ public class HomeController : Controller
         return View();
     }
 
+    [Route("/DadDay")]
+    public IActionResult DadDay() {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

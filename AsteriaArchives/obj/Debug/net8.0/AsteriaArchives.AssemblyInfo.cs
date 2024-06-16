@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AsteriaArchives")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4ed41740949d9f0aaafdbb3e016e1e05a2d96bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04dcbd34e1b3da29c6561c25feb43df1dab05406")]
 [assembly: System.Reflection.AssemblyProductAttribute("AsteriaArchives")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AsteriaArchives")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

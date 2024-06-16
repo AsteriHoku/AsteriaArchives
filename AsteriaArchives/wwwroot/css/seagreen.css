@@ -1,0 +1,210 @@
+
+:root {
+  --mc-main: #339966;
+  /*--main2-raw-sienna: #d67747;*/
+  /*--main3-mai-tai: #a76f07;*/
+
+  --mc-dark10: #2e8a5c;
+  --mc-dark20: #297a52;
+  --mc-dark30: #246b47;
+  --mc-dark40: #1f5c3d;
+  --mc-dark50: #1a4d33;
+  --mc-dark60: #143d29;
+  --mc-dark70: #0f2e1f;
+  --mc-dark80: #0a1f14;
+  --mc-dark90: #050f0a;
+  --mc-dark100: #000000;
+  --mc-light10: #47a375;
+  --mc-light20: #5cad85;
+  --mc-light30: #70b894;
+  --mc-light40: #85c2a3;
+  --mc-light50: #99ccb3;
+  --mc-light60: #add6c2;
+  --mc-light70: #c2e0d1;
+  --mc-light80: #d6ebe0;
+  --mc-light90: #ebf5f0;
+  --mc-light100: #ffffff;
+
+  --mc-complement: #993366;
+
+  --mc-split-complement1: #335299;
+  --mc-split-complement2: #993d33;
+
+  --mc-triadic1: #663399;
+  --mc-triadic2: #996633;
+
+  --mc-analogous1: #33995c;
+  --mc-analogous2: #339970;
+
+  --mc-monochromatic1: #4fee9f;
+  --mc-monochromatic2: #17442d;
+
+  --mc-tetradic1: #333399;
+  --mc-tetradic2: #993366;
+  --mc-tetradic3: #999933;
+}
+
+/*@media (min-width: 768px) {*/
+/*  html {*/
+/*    font-size: 16px;*/
+/*  }*/
+/*  a:visited {*/
+/*    color: var(--mc-dark30);*/
+/*  }*/
+/*}*/
+
+.gradient5 {
+  background: linear-gradient(to bottom right, var(--mc-main), var(--mc-split-complement1), var(--mc-split-complement2));
+}
+
+.gradient9 {
+  background: linear-gradient(to top left, var(--mc-main), var(--mc-split-complement1), var(--mc-split-complement2));
+}
+
+.gradient30 {
+  background: radial-gradient(ellipse at center, var(--mc-main), var(--mc-split-complement1), var(--mc-split-complement2));
+}
+
+.gradient36 {
+  background: radial-gradient(circle at center, var(--mc-split-complement2), var(--mc-split-complement1), var(--mc-main));
+}
+
+.gradient40 {
+  background: radial-gradient(circle at center, var(--mc-main), var(--mc-split-complement1), var(--mc-split-complement2), var(--mc-split-complement1), var(--mc-main));
+}
+
+.card {
+  border-radius: 15px;
+  border: 20px solid var(--mc-light80);
+}
+
+.card-header {
+  border-top-left-radius: 15px; !important;
+  border-top-right-radius: 15px; !important;
+  background: radial-gradient(ellipse at center, var(--mc-main) 40%, var(--mc-split-complement1), var(--mc-split-complement2) 80%);
+}
+
+.card-body {
+  /*border-bottom-left-radius: 15px; !important;*/
+  /*border-bottom-right-radius: 15px; !important;*/
+  background: var(--mc-light90);
+}
+
+/*.card {*/
+/*  position: relative;*/
+/*  border-radius: 15px;*/
+/*  padding: 20px;*/
+/*}*/
+
+/*.card::before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: -20px;*/
+/*  left: -20px;*/
+/*  right: -20px;*/
+/*  bottom: -20px;*/
+/*  background: linear-gradient(45deg, var(--main-color), var(--mc-split-complement1), var(--mc-split-complement2));*/
+/*  border-radius: inherit;*/
+/*  z-index: -1;*/
+/*}*/
+
+/*.card-header {*/
+/*  border-top-left-radius: 15px; !important;*/
+/*  border-top-right-radius: 15px; !important;*/
+/*}*/
+
+/*.card-body {*/
+/*  background: var(--mc-light70);*/
+/*  border-bottom-left-radius: 15px; !important;*/
+/*  border-bottom-right-radius: 15px; !important;*/
+/*}*/
+
+
+/*a {*/
+/*  color: #007bff;*/
+/*}*/
+
+/*a:visited {*/
+/*  color: mediumaquamarine;*/
+/*}*/
+
+/*body {*/
+/*  margin-bottom: 60px;*/
+/*  background-color: #222;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*header, footer {*/
+/*  background-color: #444;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*html {*/
+/*  font-size: 14px;*/
+/*  position: relative;*/
+/*  min-height: 100%;*/
+/*  background-color: #222;*/
+/*  color: #e7e4e4;*/
+/*}*/
+
+/*!*classes*!*/
+/*.button-font {*/
+/*  font-family: 'Courier New', monospace;*/
+/*  font-weight: bolder;*/
+/*}*/
+
+/*.geek-font {*/
+/*  font-family: 'Courier New', monospace!important;*/
+/*}*/
+
+/*.info-text {*/
+/*  color: mediumaquamarine;*/
+/*}*/
+
+/*.navbar {*/
+/*  background-color: #333!important;*/
+/*  color: #e7e4e4!important;*/
+/*}*/
+
+/*.navbar a {*/
+/*  color: #e7e4e4!important;*/
+/*}*/
+
+/*.navbar a:hover,*/
+/*.navbar a:focus {*/
+/*  color: #31adcb !important;*/
+/*}*/
+
+/*!* Optional: Add box shadow to the navbar *!*/
+/*.navbar {*/
+/*  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important; !* Add a subtle shadow for depth *!*/
+/*}*/
+
+/*!* Optional: Style active navbar items differently (e.g., with a background color) *!*/
+/*.navbar .active {*/
+/*  background-color: #31adcb!important; !* Example background color for active item *!*/
+/*}*/
+
+/*.sitecolor-background{*/
+/*  background-color: mediumaquamarine;*/
+/*}*/
+
+/*.sitecolor-btn{*/
+/*  background-color: mediumaquamarine;*/
+/*  color: black;*/
+/*}*/
+
+/*.tiny-font {*/
+/*  font-size: 0.6rem;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*!*ids*!*/
+/*#copyButton {*/
+/*  border-color: #31adcb;*/
+/*  color: #31adcb;*/
+/*}*/
+
+/*#refreshButton{*/
+/*  color: black!important;*/
+/*}*/
