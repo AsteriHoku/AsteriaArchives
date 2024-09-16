@@ -41,6 +41,22 @@ html {
   font-weight: bolder;
 }
 
+/*.button-font {*/
+/*  font-family: Arial, sans-serif;*/
+/*  font-weight: bold;*/
+/*  font-size: 1.2em;*/
+/*  color: white;*/
+/*  background-color: #007bff;*/
+/*  border: 2px solid #0056b3;*/
+/*  padding: 10px 20px;*/
+/*  text-decoration: none;*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.button-font:hover {*/
+/*  background-color: #0056b3;*/
+/*}*/
+
 .geek-font {
   font-family: 'Courier New', monospace!important;
 }
@@ -91,8 +107,22 @@ html {
 #copyButton {
   border-color: #31adcb;
   color: #31adcb;
+  transition: background-color 0.3s ease;
+}
+
+#copyButton:hover {
+  color: black;
 }
 
 #refreshButton{
   color: black!important;
+  transition: background-color 0.3s ease;
+}
+
+#refreshButton:hover,
+#refreshButton:hover i,
+#refreshButton:hover a {
+  color: #31adcb!important;
+  background-color: #222;
+  border-color: #31adcb;
 }

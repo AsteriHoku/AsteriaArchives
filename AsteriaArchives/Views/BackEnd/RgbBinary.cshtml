@@ -9,14 +9,13 @@
     <div class="container mt-5">
         <h1>Image Downloader</h1>
         <form id="rgb" onsubmit="return downloadImage(document.getElementById('textInput').value)">
-            <div class="form-group">
+            <div class="form-group pb-2 pb-lg-4">
                 <label for="textInput">Enter a special message:</label>
-                <textarea type="text" class="form-control" id="textInput" placeholder="Enter text of at least 800 characters to ensure the 1s and 0s fill the entire image" minlength="800" rows="10" required></textarea>
+                <textarea type="text" class="form-control" id="textInput" placeholder="Enter text of at least 800 characters to ensure the 1s and 0s fill the entire image. Suggestion: the lyrics to a favorite song or words to a speech or poem." minlength="800" rows="10" required></textarea>
             </div>
             <button type="submit" class="btn sitecolor-btn mt-1">Download Rainbow Binary Image</button>
         </form>
     </div>
-
 </div>
 
 <script>
