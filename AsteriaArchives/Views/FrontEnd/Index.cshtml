@@ -2,49 +2,365 @@
     ViewData["Title"] = "FrontEnd Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Wizardry!</h1>
-    <div class="row">
-        <div class="col-12">
-            <div class="text-center">
-                <h2 class="">How many licks does it take to get to the center of a Tootsie Pop?</h2>
-            </div><!-- end text center -->
-            <div class="text-center font-monospace fs-4 fw-bold">
-                <output for="licks-range" id="range-output">0</output>
-            </div>
-            <div>
-                <input class="form-control-range w-100 fourth" type="range" id="licks-range" name="usage" min="0" max="500000" value="0" step="10" list="ticks"/>
-                <datalist class="w-100" id="ticks">
-                    <option class="font-monospace" value="0" label="0"></option>
-                    <option class="font-monospace" value="100000" label="100,000"></option>
-                    <option class="font-monospace" value="200000" label="200,000"></option>
-                    <option class="font-monospace" value="300000" label="300,000"></option>
-                    <option class="font-monospace" value="400000" label="400,000"></option>
-                    <option class="font-monospace" value="500000" label="500,000+"></option>
-                </datalist>
-            </div>
-        </div> <!-- end col -->
-    </div> <!-- end row -->
+<div class="d-flex justify-content-center">
+    <button class="navbtn mx-2" id="sl" onclick="handleChoiceClicked(this.id)">｡･:*˚:✧｡</button>
+    <button class="navbtn mx-2" id="lg" onclick="handleChoiceClicked(this.id)">≪ °❈° ≫</button>
+    <button class="navbtn mx-2" id="dg" onclick="handleChoiceClicked(this.id)">◤──•~❉᯽</button>
+    <button class="navbtn mx-2" id="rg" onclick="handleChoiceClicked(this.id)">᯽❉~•──◥</button>
+    <button class="navbtn mx-2" id="cg" onclick="handleChoiceClicked(this.id)">* . °•★|•°∵</button>
+    <button class="navbtn mx-2" id="ss" onclick="handleChoiceClicked(this.id)">∵°•|☆•° . *</button>
+    <button class="navbtn mx-2" id="cp" onclick="handleChoiceClicked(this.id)">*.·:·.✧ ✦</button>
+    <button class="navbtn mx-2" id="" onclick="handleChoiceClicked(this.id)">✦ ✧.·:·.*</button>
+    <button class="navbtn mx-2" id="" onclick="handleChoiceClicked(this.id)">•❅───✧❅✦</button>
+    <button class="navbtn mx-2" id="" onclick="handleChoiceClicked(this.id)">✦❅✧───❅•</button>
+    <!-- <button onclick="selectAllColors()">ALLCOLORS</button> -->
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-      let inputRange = document.getElementById('licks-range');
-      let outputRange = document.getElementById('range-output');
+<div class="d-flex justify-content-center align-items-center mt-5" style="flex-direction: column;">
+    <div class="infinity-symbol" id="infinity"></div>
+    <h1 class="text-center mb-2">Asteri</h1>
+    <div class="row d-flex justify-content-center">
+        <div class="btn-group">
+            <div class="btn btn-info btn-lg" id="frustrated" onclick="changeColor(this)">frustrated</div>
+            <div class="btn btn-info btn-lg" id="sad" onclick="changeColor(this)">sad</div>
+            <div class="btn btn-info btn-lg" id="tired" onclick="changeColor(this)">tired</div>
+            <div class="btn btn-info btn-lg" id="anxious" onclick="changeColor(this)">anxious</div>
+            <div class="btn btn-info btn-lg" id="bored" onclick="changeColor(this)">bored</div>
+            <div class="btn btn-info btn-lg" id="confused" onclick="changeColor(this)">confused</div>
+            <div class="btn btn-info btn-lg" id="thinking" onclick="changeColor(this)">thinking</div>
+            <div class="btn btn-info btn-lg" id="interested" onclick="changeColor(this)">interested</div>
+            <div class="btn btn-info btn-lg" id="happy" onclick="changeColor(this)">happy</div>
+            <div class="btn btn-info btn-lg" id="excited" onclick="changeColor(this)">excited</div>
+        </div>
+    </div>
+    <div id="canvas-content" class="row canvas-row mb-3">
+        <canvas id="colorCanvas" class="d-none">Your browser does not support HTML5 canvas</canvas>
+        <canvas id="animatedCanvas" class="d-none">Your browser does not support HTML5 canvas</canvas>
+    </div>
+</div>
 
-      outputRange.setAttribute('for', 'licks-range');
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Wizardry!</h1> *@
+@*     <div class="row"> *@
+@*         <div class="col-12"> *@
+@*             <div class="text-center"> *@
+@*                 <h2 class="">How many licks does it take to get to the center of a Tootsie Pop?</h2> *@
+@*             </div><!-- end text center --> *@
+@*             <div class="text-center font-monospace fs-4 fw-bold"> *@
+@*                 <output for="licks-range" id="range-output">0</output> *@
+@*             </div> *@
+@*             <div> *@
+@*                 <input class="form-control-range w-100 fourth" type="range" id="licks-range" name="usage" min="0" max="500000" value="0" step="10" list="ticks"/> *@
+@*                 <datalist class="w-100" id="ticks"> *@
+@*                     <option class="font-monospace" value="0" label="0"></option> *@
+@*                     <option class="font-monospace" value="100000" label="100,000"></option> *@
+@*                     <option class="font-monospace" value="200000" label="200,000"></option> *@
+@*                     <option class="font-monospace" value="300000" label="300,000"></option> *@
+@*                     <option class="font-monospace" value="400000" label="400,000"></option> *@
+@*                     <option class="font-monospace" value="500000" label="500,000+"></option> *@
+@*                 </datalist> *@
+@*             </div> *@
+@*         </div> <!-- end col --> *@
+@*     </div> <!-- end row --> *@
+@* </div> *@
 
-      inputRange.addEventListener('input', function() {
-        outputRange.textContent = inputRange.value;
-      });
-    });
-</script>
-
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <style>
+    .btn {
+        border: none;
+        background-color: #d5dfed;
+        color: black;
+    }
+
+    .navbtn {
+        border: none;
+        background-color: white;
+    }
+
+    .infinity-symbol {
+        background-image: none;
+        position: relative;
+        width: 106px;
+        height: 50px;
+        box-sizing: content-box;
+
+        &::before,
+        &::after {
+            content: '';
+            box-sizing: content-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border: 10px inset #32557f;
+            border-radius: 50px 50px 0 50px;
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            left: auto;
+            right: 0;
+            border-radius: 50px 50px 50px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    #circle-particles-canvas {
+        position: fixed;
+        z-index: -1;
+    }
+
     datalist {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      writing-mode: vertical-lr;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        writing-mode: vertical-lr;
     }
 </style>
+
+<script>
+    let choice = 'sl';
+    let items = {
+        frustrated: {color: '#eb574c', on: false},
+        sad: {color: '#eba64c', on: false},
+        tired: {color: '#e0eb4c', on: false},
+        anxious: {color: '#4ceb57', on: false},
+        bored: {color: '#4ceba7', on: false},
+        confused: {color: '#4ce0eb', on: false},
+        thinking: {color: '#4c91eb', on: false},
+        interested: {color: '#574ceb', on: false},
+        happy: {color: '#a64ceb', on: false},
+        excited: {color: '#eb4ce0', on: false},
+    };
+    const staticChoices = ['sl','lg','dg','rg','ss','cg'];
+    const animatedChoices = ['cp'];
+
+    setInfinityColors();
+    renderCanvas();
+
+    function setInfinityColors() {
+        const onItems = Object.values(items).filter(item => item.on);
+        const colors = onItems.map(item => item.color);
+        let elem = document.getElementById('infinity');
+        let colorsCount = Object.keys(items).length;
+        if (colors.length > 0 && colors.length < colorsCount+1) {
+            for (let i = 0; i < colorsCount+1; ++i) {
+                colors.push(colors[i]);
+                if (colors.length === colorsCount+1) break;
+            }
+            elem.style.backgroundImage = `linear-gradient(to right, ${colors.join(', ')})`;
+        } else {
+            elem.style.backgroundImage = '';
+        }
+    }
+
+    function changeColor(element) {
+        let elem = element.id;
+
+        if (items[elem].on === true){
+            items[elem].on = false;
+            element.style.backgroundColor = '#d5dfed';
+        } else {
+            items[elem].on = true;
+            element.style.backgroundColor = items[elem].color;
+        }
+        setInfinityColors();
+        renderCanvas();
+    }
+
+    function handleChoiceClicked(id){
+        choice = id ? id : 'sl';
+        renderCanvas();
+    }
+
+    function renderCanvas(){
+        const {canvas, ctx, onItems} = getContext();
+
+        if (onItems.length > 0) {
+            switch (choice){
+                case 'lg':
+                case 'dg':
+                case 'rg':
+                case 'cg':
+                    renderGradientCanvas(canvas, ctx, onItems);
+                    break;
+                case 'ss':
+                    renderShapesCanvas(canvas, ctx, onItems);
+                    break;
+                case 'cp':
+                    renderCircleParticlesCanvas(canvas, ctx, onItems);
+                    break;
+                default:
+                    renderStraightLinesCanvas(canvas, ctx, onItems);
+            }
+        }
+    }
+
+    function getContext(isAnimated){
+    //todo implement isAnimated apparently
+        if (isAnimated){
+            document.getElementById('animatedCanvas').classList.remove('d-none');
+            document.getElementById('colorCanvas').classList.add('d-none');
+        } else{
+            document.getElementById('animatedCanvas').classList.add('d-none');
+            document.getElementById('colorCanvas').classList.remove('d-none');
+        }
+        let canvas = isAnimated ? document.getElementById('animatedCanvas') : document.getElementById('colorCanvas');
+        canvas.width = 1000;
+        canvas.height = 600;
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        //todo sarah can onItems just be colors?
+        const onItems = Object.values(items).filter(item => item.on);
+
+        return {canvas, ctx, onItems};
+    }
+
+    function renderStraightLinesCanvas(canvas, ctx, onItems){
+        const itemWidth = canvas.width / onItems.length;
+
+        onItems.forEach((item, index) => {
+            ctx.fillStyle = item.color;
+            ctx.fillRect(index * itemWidth, 0, itemWidth, canvas.height);
+        });
+    }
+
+    function renderGradientCanvas(canvas, ctx, onItems){
+        let grd;
+        switch (choice){
+            case 'lg':
+                grd = ctx.createLinearGradient(0, 0, canvas.width*0.75, 0);
+                break;
+            case 'dg':
+                grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height/2);
+                break;
+            case 'rg':
+                const xcenter = canvas.width/2;
+                const ycenter = canvas.height/3;
+                grd = ctx.createRadialGradient(xcenter, ycenter, 70, xcenter, ycenter+100, 340);
+                break;
+            case 'cg':
+                grd = ctx.createConicGradient(170, canvas.width/2, canvas.height/2);
+                break;
+        }
+
+        onItems.forEach((item, index) => {
+            grd.addColorStop(index / onItems.length, item.color);
+        });
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function renderShapesCanvas(canvas, ctx, onItems){
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0,0,canvas.width, canvas.height);
+
+        onItems.forEach((item, index) => {
+            ctx.fillStyle = item.color;
+            const minx = canvas.width/20;
+            const miny = canvas.height/20;
+            const size = Math.random() * (minx*5);
+            const maxx = canvas.width - minx - size;
+            const maxy = canvas.height - miny - size;
+            const randx = Math.random() * (maxx - minx) + minx;
+            const randy = Math.random() * (maxy - miny) + miny;
+
+            ctx.fillRect(randx, randy, size, size);
+        })
+    }
+
+    function renderCircleParticlesCanvas(canvas, ctx, onItems){
+        //todo sarah split this function so it can be called with different sizes for different buttons 
+        //"dandelion" 800 "circle particles" 101 "suncatcher" 1000 - maybe?
+        ctx.globalAlpha = 0.5;
+
+        animate(canvas, ctx, onItems);
+    }
+
+    function animate(canvas, ctx, onItems) {
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const size = 20;
+        const thickness = 2;
+        const colors = generateParticleColors(size, onItems);
+        const particlesArray = generateParticles(size, colors, thickness,  canvas, ctx);
+
+        let anim_frame = requestAnimationFrame(() => animate(canvas, ctx, onItems));
+        ctx.fillStyle = "rgba(0,0,0,0.05)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        if (choice !== 'cp' || particlesArray.length === 0) {
+            cancelAnimationFrame(anim_frame);
+        } else {
+            particlesArray?.forEach((particle) => particle.rotate());
+        }
+    }
+
+    function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed, canvas, ctx) {
+        this.x = x;
+        this.y = y;
+        this.particleTrailWidth = particleTrailWidth;
+        this.strokeColor = strokeColor;
+        this.theta = Math.random() * Math.PI * 2;
+        this.rotateSpeed = rotateSpeed;
+        this.t = Math.random() * 150;
+
+        this.rotate = () => {
+            const ls = { x: this.x, y: this.y };
+            this.theta += this.rotateSpeed;
+            this.x = canvas.width / 2 + Math.cos(this.theta) * this.t;
+            this.y = canvas.height / 2 + Math.sin(this.theta) * this.t;
+            ctx.beginPath();
+            ctx.lineWidth = this.particleTrailWidth;
+            ctx.strokeStyle = this.strokeColor;
+            ctx.moveTo(ls.x, ls.y);
+            ctx.lineTo(this.x, this.y);
+            ctx.stroke();
+        };
+    }
+
+    function generateParticleColors(size, onItems){
+        const onColors = onItems.map(item => item.color);
+        let colors = [];
+
+        while (colors.length < size){
+            colors = [...colors, ...onColors];
+        }
+
+        return colors;
+    }
+
+//todo sarah thickness of the line should be a parameter
+    function generateParticles(amount, colors, thickness, canvas, ctx) {
+        let particlesArray = [];
+        for (let i = 0; i < amount; ++i) {
+            particlesArray[i] = new Particle(
+                canvas.width / 2,
+                canvas.height / 2,
+                thickness,
+                colors[i],
+                0.01,
+                canvas,
+                ctx
+            );
+        }
+        return particlesArray;
+    }
+</script>
+
+@* <script> *@
+@*     document.addEventListener("DOMContentLoaded", function() { *@
+@*         let inputRange = document.getElementById('licks-range'); *@
+@*         let outputRange = document.getElementById('range-output'); *@
+@* *@
+@*         outputRange.setAttribute('for', 'licks-range'); *@
+@* *@
+@*         inputRange.addEventListener('input', function() { *@
+@*             outputRange.textContent = inputRange.value; *@
+@*         }); *@
+@*     }); *@
+@* </script> *@
